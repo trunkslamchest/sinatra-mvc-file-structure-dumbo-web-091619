@@ -1,21 +1,19 @@
 class Dog < Sinatra::Base
 
-  attr_reader
-  attr_writer
-  attr_accessor :name, :breed, :age
-  
-  @@all = []
+	attr_accessor :name, :breed, :age
+
+	DOGS = []
 
 	def initialize(name, breed, age)
-	@name = name
-	@breed = breed
-	@age = age
+		@name = name
+		@breed = breed
+		@age = age
 
-	@@all << self
+		DOGS << self
 	end
 
 	def self.all
-		@@all
-	end  
-
+		DOGS
+	end
+	
 end
