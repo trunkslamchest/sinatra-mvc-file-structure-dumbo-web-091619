@@ -1,3 +1,3 @@
-class Model
+class Dog < Sinatra::Base
 
 end
